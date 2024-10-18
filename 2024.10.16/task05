@@ -1,0 +1,29 @@
+import requests 
+
+LANGUAGES = ['ru', 'en']
+
+
+def get_quote(lang: str) -> str:
+    if lang not in LANGUAGES:
+        raise ValueError(f"lang must be 'en' or 'ru', not '{lang}'")
+
+    url = 'http://api.forismatic.com/api/1.0/'  
+    payload = {  
+        'method': 'getQuote', 
+        'format': 'text',  
+        'lang': lang}  
+    res = requests.get(url,params=payload)  
+
+    return res.text 
+
+
+def main() -> None:
+    print(f"Choose the language you want the quote in\n0 - Russian | 1 - English: ")
+    choice: int = int(input())
+    if choice not in [0, 1]:
+        raise ValueError(f"Choice can be 0 or 1, not {choice}")
+    print(get_quote(LANGUAGES[choice]))
+
+
+if __name__ == '__main__':
+    main()
