@@ -5,3 +5,10 @@ from - из
 employees - таблицы с именем employees
 
 select * from employees limit 5 - вывести все колонки из таблицы размерностью 5 строк
+
+SELECT *
+FROM employees
+WHERE city = 'London'; //фильтрует данные, выводит только те, в которых значение в поле city является London
+
+SELECT DISTINCT city
+FROM employees; //показывает возможные варианты, выбор, где не повторяются значения
