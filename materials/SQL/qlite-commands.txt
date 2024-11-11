@@ -1,0 +1,11 @@
+Нужно скачать и разархивировать файл
+откройте терминал чтобы было активировано виртуальное окружение
+Чтобы выйти из программы sqlite напишите .exit
+Чтобы открыть базу данных внутри программы sqlite напишите .open ПутьКФайлуБазыДанных
+Откройте базу данных chinook.db
+
+sqlite3
+.open C:\Users\Professional\Downloads\chinook\chinook.db
+.table
+
+select * from albums limit 10
