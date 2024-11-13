@@ -9,3 +9,25 @@ sqlite3
 .table
 
 select * from albums limit 10
+
+Что делает ORDER BY, ASC и DESC?
+сортирует (order by): asc(возрастание), desc (убывание)
+
+Как  узнать сколько записей в таблице table?
+SELECT COUNT(*) from table;
+
+Как посмотреть список таблиц в приложении sqlite?
+.table
+
+Как посмотреть схему таблицы в приложении sqlite?
+.schema ИмяТаблицы
+
+Как открыть базу данных в приложении sqlite?
+Два способа.
+1//  
+sqlite3
+.open C:\Users\Professional\Downloads\chinook\chinook.db
+.table
+2//   
+sqlite3
+.\C:\Users\Professional\Downloads\chinook\chinook.db
