@@ -31,3 +31,51 @@ sqlite3
 2//   
 sqlite3
 .\C:\Users\Professional\Downloads\chinook\chinook.db
+
+//Выведите все записи tracks из колонок name, 
+albumid и milliseconds, отсортируйте по albumid во возрастанию, 
+а по milliseconds по убыванию//
+select name, milliseconds, albumid
+from tracks
+order by albumid asc, milliseconds desc;
+
+Выведите все записи из таблицы customers из колонки city по возрастанию.
+select city
+from customers
+
+Выведите все уникальные записи из таблицы customers из колонки city по возрастанию.
+select city
+from customers
+Order by city
+
+SELECT name, milliseconds, bytes, albumid
+FROM tracks
+WHERE albumid = 2;
+
+//Выведите все записи таблицы tracks 
+из колонок name, milliseconds, albumid 
+с альбома 1 и количеством миллисекунд больше 250000.
+Для объединения условий используйте оператор AND.//
+
+select name, milliseconds, albumid
+from tracks
+where albumid = 1 and milliseconds>250000;
+
+Создать новую базу: sqlite3 ex1
+
+//Создайте таблицу в sqlite внутри новой базы данных//
+create table tbl1(one text, two int);
+
+//Добавим запись в базу//
+insert into tbl1 values('hello!',10);
+//И ещё//
+insert into tbl1 values('goodbye', 20);
+
+//Создадим ещё таблицу//
+CREATE TABLE tbl2 (
+    f1 varchar(30) primary key,
+    f2 text,
+    f3 real);
+
+
+
